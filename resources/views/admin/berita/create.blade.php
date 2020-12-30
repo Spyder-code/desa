@@ -1,5 +1,12 @@
 @extends('layouts.admin')
 @section('content')
+<script src='https://cdn.tiny.cloud/1/ip0rkeafploig1u7xvh8y8bb0c7qg3gz1kesdzcwab09fnzx/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+</script>
+<script>
+  tinymce.init({
+    selector: '#mytextarea'
+  });
+</script>
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
@@ -52,7 +59,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi</label>
-                                <textarea name="deskripsi" cols="30" rows="5" class="form-control @error('deskripsi') is-invalid @enderror">{{ old('deskripsi') }}</textarea>
+                                <textarea id="mytextarea" name="deskripsi" cols="30" rows="5" class="form-control @error('deskripsi') is-invalid @enderror">{{ old('deskripsi') }}</textarea>
                                     @error('deskripsi')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
