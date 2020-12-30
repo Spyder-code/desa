@@ -14,10 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Auth::routes();
-Route::get('/', function () {
-    return view('user.index');
-});
+// Auth::routes();
+Auth::routes(['register' => false]);
+Route::get('/', 'UserController@index')->name('user.home');
+Route::get('/berita', 'UserController@berita')->name('user.berita');
+Route::get('/hukum', 'UserController@hukum')->name('user.hukum');
+Route::get('/kunjung', 'UserController@kunjung')->name('user.kunjung');
+Route::get('/kontak', 'UserController@kontak')->name('user.kontak');
+Route::get('/pertanian', 'UserController@pertanian')->name('user.pertanian');
+Route::get('/apb', 'UserController@apb')->name('user.apb');
+Route::get('/rkp', 'UserController@rkp')->name('user.rkp');
+Route::get('/rpjm', 'UserController@rpjm')->name('user.rpjm');
+Route::get('/penduduk', 'UserController@penduduk')->name('user.penduduk');
+Route::get('/wisata', 'UserController@wisata')->name('user.wisata');
+Route::get('/produk', 'UserController@produk')->name('user.produk');
+Route::get('/bum', 'UserController@bum')->name('user.bum');
+Route::get('/berita/{berita}', 'UserController@beritaShow')->name('user.berita.show');
+Route::get('/produk/{produk}', 'UserController@produkShow')->name('user.produk.show');
+Route::get('/wisata/{wisata}', 'UserController@wisataShow')->name('user.wisata.show');
+Route::post('/kontak', 'UserController@kontakStore')->name('user.kontak.store');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin','middleware' => ['auth']], function () {
     Route::resource('berita', 'Admin\BeritaController');

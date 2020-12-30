@@ -5,18 +5,25 @@ body {
     color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    background: #b4b0b09d;
+    /* background: #b4b0b09d; */
+    background-image: url('../../images/bg.jpg');
+    /* background-color:rgba(255, 255, 255, 0.75);
+    background-blend-mode:darken;  */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:0 -1100px;
+    background-size:cover;
 }
 
 a {
-    color: #111111;
+    color: rgb(27, 161, 161);
     transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #000000;
+    color:  rgb(27, 161, 161);
     outline: none;
     text-decoration: none;
 }
@@ -188,10 +195,6 @@ button.btn:hover {
 /**********************************/
 /*********** Brand CSS ************/
 /**********************************/
-.brand {
-    /* margin: 15px 0; */
-    /* background: #111111; */
-}
 
 .brand .b-logo {
     text-align: left;
@@ -259,7 +262,7 @@ button.btn:hover {
         text-align: center;
         margin-bottom: 15px;
     }
-    
+
     .brand .b-search {
         margin-bottom: 0;
     }
@@ -277,7 +280,7 @@ button.btn:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px rgba(255, 255, 77, 0.5);
     z-index: 999;
 }
 
@@ -287,18 +290,36 @@ button.btn:hover {
     padding: 0;
 }
 
-.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link {
+    padding: 10px 10px 8px 10px;
+    color: #f8f9fa;
+    font-weight: bold;
+}
+
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: rgb(27, 161, 161);
+}
+
+/* .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: #ffffff;
-}
+    color: rgb(27, 161, 161);
+} */
 
 .navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link .active {
+    border-bottom: 2px solid #000000;
+    transition: none;
+}
+
 .navbar-dark .navbar-nav .nav-link.active {
     border-bottom: 2px solid #000000;
     transition: none;
+    color:rgb(27, 161, 161);
 }
 
 .nav-bar .dropdown-menu {
@@ -307,17 +328,24 @@ button.btn:hover {
     border-radius: 0;
     background: #f8f9fa;
 }
+.navbar-nav a:hover{
+    color:  rgb(27, 161, 161);
+}
+
+.nav-item :hover{
+    color:  rgb(27, 161, 161);
+}
 
 @media (min-width: 768px) {
     .nav-bar,
     .nav-bar .navbar {
         background: #111111 !important;
     }
-    
+
     .nav-bar .navbar-brand {
         display: none;
     }
-    
+
     .nav-bar a.nav-link {
         padding: 8px 15px;
         font-size: 15px;
@@ -325,21 +353,21 @@ button.btn:hover {
     }
 }
 
-@media (max-width: 768px) {   
+@media (max-width: 768px) {
     .nav-bar,
     .nav-bar .navbar {
         padding: 3px 0;
         background: #111111 !important;
     }
-    
+
     .nav-bar a.nav-link {
         padding: 5px;
     }
-    
+
     .nav-bar .dropdown-menu {
         box-shadow: none;
     }
-    
+
     .nav-bar .social {
         display: none;
     }
@@ -402,9 +430,9 @@ button.btn:hover {
 
 .top-news .tn-title {
     position: absolute;
-    top: 0; 
+    top: 0;
     right: 0;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     padding: 15px 10px 15px 20px;
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
@@ -427,7 +455,7 @@ button.btn:hover {
 }
 
 .top-news .tn-title a:hover {
-    color: #111111;
+    color:  rgb(27, 161, 161);
 }
 
 .top-news .tn-left {
@@ -523,9 +551,9 @@ button.btn:hover {
 
 .cat-news .cn-title {
     position: absolute;
-    top: 0; 
+    top: 0;
     right: 0;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     padding: 15px 10px 15px 20px;
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
@@ -543,7 +571,7 @@ button.btn:hover {
 }
 
 .cat-news .cn-title a:hover {
-    color: #111111;
+    color: rgb(27, 161, 161);
 }
 
 .cat-news .slick-prev,
@@ -680,9 +708,9 @@ button.btn:hover {
 
 .main-news .mn-title {
     position: absolute;
-    top: 0; 
+    top: 0;
     right: 0;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     padding: 15px 10px 15px 20px;
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
@@ -700,7 +728,7 @@ button.btn:hover {
 }
 
 .main-news .mn-title a:hover {
-    color: #111111;
+    color: rgb(27, 161, 161);
 }
 
 .main-news .mn-list {
@@ -721,15 +749,15 @@ button.btn:hover {
 }
 
 .main-news .mn-list ul li {
-    margin: 0 0 12px 22px; 
+    margin: 0 0 12px 22px;
 }
 
 .main-news .mn-list ul li:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .main-news .mn-list ul li a {
-    color: #000000;
+    color:  #464a4e;
     display: block;
     line-height: 23px;
 }
@@ -739,12 +767,12 @@ button.btn:hover {
     content: '\f061';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #000000;
+    color: rgb(27, 161, 161);
     left: 1px;
 }
 
 .main-news .mn-list ul li a:hover {
-    color: #111111;
+    color:  rgb(27, 161, 161);
 }
 
 
@@ -830,9 +858,9 @@ button.btn:hover {
 
 .single-news .sn-slider .sn-title {
     position: absolute;
-    top: 0; 
+    top: 0;
     right: 0;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     padding: 15px 10px 15px 20px;
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
@@ -1019,11 +1047,11 @@ button.btn:hover {
 }
 
 .sidebar .category ul li {
-    margin: 0 0 12px 22px; 
+    margin: 0 0 12px 22px;
 }
 
 .sidebar .category ul li:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .sidebar .category ul li a {
@@ -1033,7 +1061,7 @@ button.btn:hover {
 }
 
 .sidebar .category ul li a:hover {
-    color: #111111;
+    color:  rgb(27, 161, 161);
 }
 
 .sidebar .category ul li::before {
@@ -1178,11 +1206,11 @@ button.btn:hover {
 }
 
 .footer .footer-widget ul li {
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
 }
 
 .footer .footer-widget ul li:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .footer .footer-widget ul li a {
@@ -1201,7 +1229,7 @@ button.btn:hover {
 
 .footer .footer-widget ul li a:hover {
     padding-left: 10px;
-    color: #111111;
+    color: #13687e;
 }
 
 .footer .contact-info p {
@@ -1361,6 +1389,21 @@ button.btn:hover {
 @media (max-width: 768.98px) {
     .footer-bottom .copyright,
     .footer-bottom .template-by {
-        text-align: center; 
-    } 
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        color: #000000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        /* background: #b4b0b09d; */
+        background-image: url('../../images/bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-position:0 0px;
+        background-size:cover;
+    }
 }
