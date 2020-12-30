@@ -45,12 +45,12 @@
                     <!-- ============================================================== -->
                     <div class="navbar-brand">
                         <!-- Logo icon -->
-                        <a href="main-dashboard">
+                        <a href="{{ url('home') }}">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
-                                <img src="" alt="homepage" style="height: 45px; max-width:180px; min-width:60px" class="dark-logo" />
+                                <img src="{{ asset('images/logo-banner.png') }}" alt="homepage" style="height: 45px; max-width:180px; min-width:60px" class="dark-logo" />
                                 <!-- Light Logo icon -->
-                                <img src="" alt="homepage" style="height: 75px; max-width:180px; min-width:150px" class="light-logo" />
+                                <img src="{{ asset('images/logo-banner.png') }}" alt="homepage" style="height: 75px; max-width:180px; min-width:150px" class="light-logo" />
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
@@ -106,10 +106,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="" class="rounded-circle"
+                                <img src="{{ asset('images/guest.png') }}" class="rounded-circle"
                                     width="40">
                                 <span class="ml-2 d-none d-lg-inline-block">
-                                    <span class="text-dark">{{ Auth::user()->panggilan }}</span>
+                                    <span class="text-dark">{{ Auth::user()->name }}</span>
                                     <i data-feather="chevron-down" class="svg-icon"></i>
                                 </span>
                             </a>
@@ -118,7 +118,7 @@
                                         class="svg-icon mr-2 ml-1"></i>
                                     My Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="return confirm('Are You sure?')"><i data-feather="power"
+                                <a class="dropdown-item" href="{{ url('logout') }}" onclick="return confirm('Are You sure?')"><i data-feather="power"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Logout</a>
                             </div>
@@ -148,17 +148,17 @@
                     <li class="list-divider"></li>
                     <li class="nav-small-cap"><span class="hide-menu">Produk</span></li>
                     <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('hukum.index') }}"
-                        aria-expanded="false"><i data-feather="user-plus" class="feather-icon"></i><span
+                        aria-expanded="false"><i data-feather="award" class="feather-icon"></i><span
                             class="hide-menu">Produk Hukum
                         </span></a>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('produk.index') }}"
-                            aria-expanded="false"><i data-feather="user-check" class="feather-icon"></i><span
+                            aria-expanded="false"><i data-feather="archive" class="feather-icon"></i><span
                                 class="hide-menu">Produk Desa
                             </span></a>
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('pertanian.index') }}"
-                        aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
+                        aria-expanded="false"><i data-feather="wind" class="feather-icon"></i><span
                             class="hide-menu">Pertanian/Peternakan
                         </span></a>
                     </li>
@@ -168,27 +168,27 @@
                         aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                             class="hide-menu">Penduduk </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('penduduk.pekerjaan') }}" class="sidebar-link"><span
                                     class="hide-menu"> Pekerjaan
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="form-input-grid.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('penduduk.umur') }}" class="sidebar-link"><span
                                     class="hide-menu"> Rentang umur
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('penduduk.agama') }}" class="sidebar-link"><span
                                     class="hide-menu"> Agama
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('penduduk.pendidikan') }}" class="sidebar-link"><span
                                     class="hide-menu"> Pendidikan
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('penduduk.dusun') }}" class="sidebar-link"><span
                                     class="hide-menu"> Dusun
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
+                        <li class="sidebar-item"><a href="{{ route('penduduk.perkawinan') }}" class="sidebar-link"><span
                                     class="hide-menu"> Status perkawinan
                                 </span></a>
                         </li>
@@ -238,7 +238,7 @@
                     aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span class="hide-menu">Profile</span></a></li>
                     {{-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="pesan"
                     aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span class="hide-menu">Pesan Masuk</span></a></li> --}}
-                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ ('logout') }}" onclick="return confirm('Are You sure?')"
+                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ url('logout') }}" onclick="return confirm('Are You sure?')"
                             aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                 class="hide-menu">Logout</span></a></li>
                     </ul>

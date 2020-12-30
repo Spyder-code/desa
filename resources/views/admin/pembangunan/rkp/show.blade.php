@@ -2,82 +2,103 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header bg-info text-white">Info produk</div>
+                    <div class="card-header bg-info text-white">Detail RKP</div>
                     <div class="card-body">
                         <ul class="list-group text-left">
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col col-4">
-                                        <label for="address">Nama produk</label>
+                                        <label for="address">Bidang</label>
                                     </div>
                                     <div class="col col-2">
                                         <label for="">:</label>
                                     </div>
                                     <div class="col">
-                                        {{$produk->nama}}
+                                        {{$rkp->bidang}}
                                     </div>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col col-4">
-                                        <label for="address">Deskripsi</label>
+                                        <label for="address">Kegiatan</label>
                                     </div>
                                     <div class="col col-2">
                                         <label for="">:</label>
                                     </div>
                                     <div class="col">
-                                        {{$produk->deskripsi}}
+                                        {{$rkp->kegiatan}}
                                     </div>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col col-4">
-                                        <label for="address">Stock</label>
+                                        <label for="address">Lokasi</label>
                                     </div>
                                     <div class="col col-2">
                                         <label for="">:</label>
                                     </div>
                                     <div class="col">
-                                        {{$produk->stock}}
+                                        {{$rkp->lokasi}}
                                     </div>
                                 </div>
                             </li>
-                            @foreach ($harga as $item)
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col col-4">
-                                        <label for="address">Harga {{ $item->area }}</label>
+                                        <label for="address">Volume</label>
                                     </div>
                                     <div class="col col-2">
                                         <label for="">:</label>
                                     </div>
                                     <div class="col">
-                                        Rp. <span class="uang">{{$item->harga}}</span>
+                                        {{$rkp->volume}}
                                     </div>
                                 </div>
                             </li>
-                            @endforeach
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col col-4">
+                                        <label for="address">Tahun</label>
+                                    </div>
+                                    <div class="col col-2">
+                                        <label for="">:</label>
+                                    </div>
+                                    <div class="col">
+                                        {{$rkp->tahun}}
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col col-4">
+                                        <label for="address">Sumber</label>
+                                    </div>
+                                    <div class="col col-2">
+                                        <label for="">:</label>
+                                    </div>
+                                    <div class="col">
+                                        {{$rkp->sumber}}
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col col-4">
+                                        <label for="address">Pola</label>
+                                    </div>
+                                    <div class="col col-2">
+                                        <label for="">:</label>
+                                    </div>
+                                    <div class="col">
+                                        {{$rkp->pola}}
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-7">
-                <div class="card">
-                    <div class="card-header bg-warning text-white">Image</div>
-                    <div class="card-body text-center">
-                        <img src="{{ $pic->path }}" id="target" alt="{{ $pic->name }}" class="img-thumbnail" style="height: 300px">
-                        <hr>
-                        <div class="row mt-2">
-                            @foreach ($image as $item)
-                            <div class="col-md-3">
-                                <img src="{{ $item->path }}" class="img" style="width:100px; height: 80px;" alt="{{ $item->name }}">
-                            </div>
-                            @endforeach
-                        </div>
                     </div>
                 </div>
             </div>

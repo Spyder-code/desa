@@ -9,7 +9,7 @@
                             <div class="d-inline-flex align-items-center">
                                 <h2 class="text-dark mb-1 font-weight-medium">{{ $data->count() }}</h2>
                             </div>
-                            <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Jumlah semua kunjungan</h6>
+                            <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Jumlah semua RKP Desa</h6>
                         </div>
                         <div class="ml-auto mt-md-3 mt-lg-0">
                             <span class="opacity-7 text-muted"><i data-feather="box"></i></span>
@@ -21,24 +21,35 @@
 
         <div class="row mb-3">
             <div class="col">
-                <a href="{{ route('kunjung.create') }}" class="btn btn-success">Tambah data</a>
+                <a href="{{ route('rkp.create') }}" class="btn btn-success">Tambah data</a>
             </div>
         </div>
+
+        @if ($message = Session::get('success'))
+        <div class="row">
+            <div class="col mt-3">
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            </div>
+        </div>
+        @endif
 
         <div class="row">
             <div class="col">
                 <div class="card border border-primary">
-                    <div class="card-header bg-primary text-white">List kunjungan</div>
+                    <div class="card-header bg-primary text-white">List RKP</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="zero_config" class="table table-striped table-bordered no-wrap">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama instansi/organisasi</th>
-                                        <th>Kegiatan</th>
-                                        <th>Jumlah peserta</th>
-                                        <th>Tanggal kunjungan</th>
+                                        <th>Bidang</th>
+                                        <th>Lokasi</th>
+                                        <th>Tahun</th>
+                                        <th>Jumlah</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -46,18 +57,18 @@
                                     @foreach ($data as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->nama }}</td>
-                                        <td>{{ $item->kegiatan }}</td>
+                                        <td>{{ $item->bidang }}</td>
+                                        <td>{{ $item->lokasi }}</td>
+                                        <td>{{ $item->tahun }}</td>
                                         <td>{{ $item->jumlah }}</td>
-                                        <td>{{ date('d F Y', strtotime($item->tanggal)) }}</td>
                                         <td class="d-flex justify-content-center">
-                                            {{-- <a href="{{ route('kunjung.show',['kunjung'=>$item->id]) }}" class="btn btn-warning mr-2" data-toggle="tooltip" data-placement="bottom" title="Detail kunjung"><i class="text-white fas fa-search"></i></a> --}}
-                                            <form action="{{ route('kunjung.destroy',['kunjung'=>$item->id]) }}" method="post">
+                                            <a href="{{ route('rkp.show',['rkp'=>$item->id]) }}" class="btn btn-warning mr-2" data-toggle="tooltip" data-placement="bottom" title="Detail rkp"><i class="text-white fas fa-search"></i></a>
+                                            <form action="{{ route('rkp.destroy',['rkp'=>$item->id]) }}" method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger mr-2" onclick="return confirm('Are you sure?')" data-toggle="tooltip" data-placement="bottom" title="Hapus kunjung"><i class="text-white fas fa-trash-alt"></i></button>
+                                                <button type="submit" class="btn btn-danger mr-2" onclick="return confirm('Are you sure?')" data-toggle="tooltip" data-placement="bottom" title="Hapus rkp"><i class="text-white fas fa-trash-alt"></i></button>
                                             </form>
-                                            <a href="{{ route('kunjung.edit',['kunjung'=>$item->id]) }}" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Edit kunjung"><i class="text-white fas fa-pencil-alt"></i></a>
+                                            <a href="{{ route('rkp.edit',['rkp'=>$item->id]) }}" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Edit rkp"><i class="text-white fas fa-pencil-alt"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -15,7 +15,8 @@ class ApbController extends Controller
      */
     public function index()
     {
-        //
+        $data = Apb::all();
+        return view('admin.pembangunan.apb.index',compact('data'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ApbController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pembangunan.apb.create');
     }
 
     /**
@@ -36,7 +37,25 @@ class ApbController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'bidang' => 'required',
+            'kegiatan' => 'required',
+            'anggaran' => 'required',
+            'realisasi' => 'required',
+            'defisit' => 'required',
+            'sumber' => 'required',
+        ]);
+
+        Apb::create([
+            'bidang' => $request->bidang,
+            'kegiatan' => $request->kegiatan,
+            'anggaran' =>$request->anggaran,
+            'realisasi' =>$request->realisasi,
+            'defisit' =>$request->defisit,
+            'sumber' => $request->sumber,
+        ]);
+
+        return redirect()->route('apb.index')->with('success','Data berhasil ditambah!');
     }
 
     /**
@@ -47,7 +66,7 @@ class ApbController extends Controller
      */
     public function show(Apb $apb)
     {
-        //
+        return view('admin.pembangunan.apb.show',compact('apb'));
     }
 
     /**
@@ -58,7 +77,7 @@ class ApbController extends Controller
      */
     public function edit(Apb $apb)
     {
-        //
+        return view('admin.pembangunan.apb.edit',compact('apb'));
     }
 
     /**
@@ -70,7 +89,25 @@ class ApbController extends Controller
      */
     public function update(Request $request, Apb $apb)
     {
-        //
+        $request->validate([
+            'bidang' => 'required',
+            'kegiatan' => 'required',
+            'anggaran' => 'required',
+            'realisasi' => 'required',
+            'defisit' => 'required',
+            'sumber' => 'required',
+        ]);
+
+        Apb::find($apb->id)->update([
+            'bidang' => $request->bidang,
+            'kegiatan' => $request->kegiatan,
+            'anggaran' =>$request->anggaran,
+            'realisasi' =>$request->realisasi,
+            'defisit' =>$request->defisit,
+            'sumber' => $request->sumber,
+        ]);
+
+        return redirect()->route('apb.index')->with('success','Data berhasil diupdate!');
     }
 
     /**
@@ -81,6 +118,7 @@ class ApbController extends Controller
      */
     public function destroy(Apb $apb)
     {
-        //
+        Apb::destroy($apb->id);
+        return redirect()->route('apb.index')->with('success','Data berhasil dihapus!');
     }
 }

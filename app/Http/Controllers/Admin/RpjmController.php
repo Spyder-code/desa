@@ -15,7 +15,8 @@ class RpjmController extends Controller
      */
     public function index()
     {
-        return view('admin.pembangunan.rpjm.index');
+        $data = Rpjm::all();
+        return view('admin.pembangunan.rpjm.index',compact('data'));
     }
 
     /**
@@ -36,7 +37,31 @@ class RpjmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'bidang' => 'required',
+            'sub_bidang' => 'required',
+            'kegiatan' => 'required',
+            'lokasi' => 'required',
+            'volume' => 'required',
+            'tahun' => 'required',
+            'jumlah' => 'required',
+            'sumber' => 'required',
+            'pola' => 'required',
+        ]);
+
+        Rpjm::create([
+            'bidang' => $request->bidang,
+            'sup_bidang' => $request->sub_bidang,
+            'kegiatan' => $request->kegiatan,
+            'lokasi' => $request->lokasi,
+            'volume' => $request->volume,
+            'tahun' => $request->tahun,
+            'jumlah' => $request->jumlah,
+            'sumber' => $request->sumber,
+            'pola' => $request->pola,
+        ]);
+
+        return redirect()->route('rpjm.index')->with('success','Data berhasil ditambahkan!');
     }
 
     /**
@@ -70,7 +95,31 @@ class RpjmController extends Controller
      */
     public function update(Request $request, Rpjm $rpjm)
     {
-        //
+        $request->validate([
+            'bidang' => 'required',
+            'sub_bidang' => 'required',
+            'kegiatan' => 'required',
+            'lokasi' => 'required',
+            'volume' => 'required',
+            'tahun' => 'required',
+            'jumlah' => 'required',
+            'sumber' => 'required',
+            'pola' => 'required',
+        ]);
+
+        Rpjm::find($rpjm->id)->update([
+            'bidang' => $request->bidang,
+            'sup_bidang' => $request->sub_bidang,
+            'kegiatan' => $request->kegiatan,
+            'lokasi' => $request->lokasi,
+            'volume' => $request->volume,
+            'tahun' => $request->tahun,
+            'jumlah' => $request->jumlah,
+            'sumber' => $request->sumber,
+            'pola' => $request->pola,
+        ]);
+
+        return redirect()->route('rpjm.index')->with('success','Data berhasil diupdate!');
     }
 
     /**
@@ -81,6 +130,7 @@ class RpjmController extends Controller
      */
     public function destroy(Rpjm $rpjm)
     {
-        //
+        Rpjm::destroy($rpjm->id);
+        return redirect()->route('rpjm.index')->with('success','Data berhasil dihapus!');
     }
 }

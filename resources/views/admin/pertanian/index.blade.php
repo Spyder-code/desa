@@ -26,7 +26,7 @@
                             </h6>
                         </div>
                         <div class="ml-auto mt-md-3 mt-lg-0">
-                            <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
+                            <span class="opacity-7 text-muted"><i data-feather="box"></i></span>
                         </div>
                     </div>
                 </div>
@@ -38,6 +38,17 @@
                 <a href="{{ route('pertanian.create') }}" class="btn btn-success">Tambah data</a>
             </div>
         </div>
+
+        @if ($message = Session::get('success'))
+        <div class="row">
+            <div class="col mt-3">
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            </div>
+        </div>
+        @endif
 
         <div class="row">
             <div class="col">

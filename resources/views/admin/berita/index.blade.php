@@ -25,6 +25,17 @@
             </div>
         </div>
 
+        @if ($message = Session::get('success'))
+        <div class="row">
+            <div class="col mt-3">
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+            </div>
+        </div>
+        @endif
+
         <div class="row">
             <div class="col">
                 <div class="card border border-primary">

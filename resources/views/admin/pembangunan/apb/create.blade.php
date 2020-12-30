@@ -3,7 +3,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-7 align-self-center">
-                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambahkan kunjung!</h3>
+                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambahkan APB Desa!</h3>
             </div>
             <div class="col-5 align-self-center">
                 <div class="bg-white border-0 custom-shadow custom-radius float-right p-3">
@@ -35,33 +35,55 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header bg-info text-white">Data kunjungan</div>
+                    <div class="card-header bg-info text-white">Data APB Desa</div>
                     <div class="card-body">
-                        <form action="{{ route('kunjung.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('apb.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row">
-                                <div class="col-sm-6">
-                                    <label>Nama instansi/organisasi</label>
-                                    <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}">
-                                    @error('nama')
+                                <div class="col-sm-12">
+                                    <label>Bidang</label>
+                                    <input type="text" name="bidang" class="form-control @error('bidang') is-invalid @enderror" value="{{ old('bidang') }}">
+                                    @error('bidang')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
-                                <div class="col-sm-3">
-                                    <label>Jumlah</label>
-                                    <input type="number" min="1" name="jumlah" class="form-control @error('jumlah') is-invalid @enderror" value="{{ old('jumlah') }}">
-                                    @error('jumlah')
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <label>Anggaran</label>
+                                    <input type="text" name="anggaran" class="form-control @error('anggaran') is-invalid @enderror" value="{{ old('anggaran') }}">
+                                    @error('anggaran')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
-                                <div class="col-sm-3">
-                                    <label>Tanggal</label>
-                                    <input type="date" name="tanggal" class="form-control @error('tanggal') is-invalid @enderror" value="{{ old('tanggal') }}">
-                                    @error('tanggal')
+                                <div class="col-sm-4">
+                                    <label>Realisasi</label>
+                                    <input type="text" name="realisasi" class="form-control @error('realisasi') is-invalid @enderror" value="{{ old('realisasi') }}">
+                                    @error('realisasi')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Defisit</label>
+                                    <input type="text" name="defisit" class="form-control @error('defisit') is-invalid @enderror" value="{{ old('defisit') }}">
+                                    @error('defisit')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label>Sumber</label>
+                                    <input type="text" name="sumber" class="form-control @error('sumber') is-invalid @enderror" value="{{ old('sumber') }}">
+                                    @error('sumber')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -78,7 +100,7 @@
                                     @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-success d-block mt-3 w-100">Buat kunjung</button>
+                            <button type="submit" class="btn btn-success d-block mt-3 w-100">Buat APB Desa</button>
                         </form>
                     </div>
                 </div>
