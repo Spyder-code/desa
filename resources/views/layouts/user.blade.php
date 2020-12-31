@@ -86,7 +86,7 @@
       </a>
     </div>
     <div class="col-auto mt-3 d-flex">
-      <h6 class="ml-2 border-dark">{{ date('d F Y') }}</h6>
+      <h6 class="ml-2 border-dark">{{ date('d-f-Y') }}</h6>
     </div>
   </div>
   <div class="divider"></div>
