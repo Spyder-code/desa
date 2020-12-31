@@ -2,7 +2,7 @@
 @section('nav-informasi','active')
 @section('content')
 <div class="single-news">
-    <div class="container bg-white">
+    <div class="container my-5 bg-white">
         <div class="row">
             <div class="col-lg-8 mt-3">
                 <div class="sn-container">

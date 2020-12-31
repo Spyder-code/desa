@@ -4,8 +4,8 @@
     <div class="cat-news my-5 container">
         <div class="row">
             <div class="col">
-                <div class="card border border-dark">
-                    <div class="card-header" style="background: rgba(255, 255, 77, 0.5);">List pertanian</div>
+                <div class="card border border-info">
+                    <div class="card-header bg-info">List pertanian</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="zero_config" class="table table-striped table-bordered no-wrap">
@@ -35,8 +35,8 @@
         </div>
         <div class="row mt-4">
             <div class="col">
-                <div class="card border border-dark">
-                    <div class="card-header" style="background: rgba(255, 255, 77, 0.5);">List peternakan</div>
+                <div class="card border border-info">
+                    <div class="card-header bg-info">List peternakan</div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table id="two_config" class="table table-striped table-bordered no-wrap">

@@ -4,8 +4,8 @@
     <div class="container my-5">
         <div class="row">
             <div class="col">
-                <div class="card border border-dark">
-                    <div class="card-header" style="background: rgba(255, 255, 77, 0.5);">{{ $produk->nama }}</div>
+                <div class="card border border-info">
+                    <div class="card-header bg-info">{{ $produk->nama }}</div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">

@@ -1,127 +1,70 @@
-(function ($) {
-    "use strict";
-    
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 150) {
-            $('.nav-bar').addClass('nav-sticky');
-        } else {
-            $('.nav-bar').removeClass('nav-sticky');
+// $(window).scroll(function () { 
+//     var a = $(this).scrollTop();
+//     if(a>=0 && a<=250 ){
+//         $('.header-main').css('height',100);
+//     }else if(a>250){
+//         $('.header-main').css('height',200);
+//     }
+// });
+
+$('#sidebar').hide();
+
+function sideOpen() {
+    $('#arrow-right').hide();
+    $('#sidebar').addClass('animated fadeInLeft');
+    $('#sidebar').show();
+  }
+function sideClose() {
+    $('#arrow-right').show();
+    $('#sidebar').hide();
+  }
+
+  $('.owl-top').owlCarousel({
+    loop:true,
+    items:4,
+    autoplay:true,
+    responsiveClass:true,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:4,
+            // nav:true,
+            loop:false
         }
-    });
-    
-    
-    // Dropdown on mouse hover
-    $(document).ready(function () {
-        function toggleNavbarMethod() {
-            if ($(window).width() > 768) {
-                $('.navbar .dropdown').on('mouseover', function () {
-                    $('.dropdown-toggle', this).trigger('click');
-                }).on('mouseout', function () {
-                    $('.dropdown-toggle', this).trigger('click').blur();
-                });
-            } else {
-                $('.navbar .dropdown').off('mouseover').off('mouseout');
-            }
+    }
+})
+    $('.owl-flash').owlCarousel({
+    loop:true,
+    items:1,
+    responsiveClass:true,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        1000:{
+            items:1,
+            // nav:true,
+            loop:false
         }
-        toggleNavbarMethod();
-        $(window).resize(toggleNavbarMethod);
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-    
-    
-    // Top News Slider
-    $('.tn-slider').slick({
-        autoplay: true,
-        infinite: true,
-        dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-    
-    
-    // Category News Slider
-    $('.cn-slider').slick({
-        autoplay: false,
-        infinite: true,
-        dots: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-    
-    
-    // Related News Slider
-    $('.sn-slider').slick({
-        autoplay: false,
-        infinite: true,
-        dots: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-})(jQuery);
+    }
+})
+    $('.owl-bg').owlCarousel({
+    loop:true,
+    items:1,
+    responsiveClass:true,
+    autoplayHoverPause:true,
+    margin:false
+})
+
+
 

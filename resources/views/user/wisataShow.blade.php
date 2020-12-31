@@ -4,8 +4,8 @@
     <div class="container my-5">
         <div class="row">
             <div class="col">
-                <div class="card border border-dark">
-                    <div class="card-header" style="background: rgba(255, 255, 77, 0.5);">Wisata {{ $wisata->nama }}</div>
+                <div class="card border border-info">
+                    <div class="card-header bg-info">Wisata {{ $wisata->nama }}</div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -20,7 +20,7 @@
                                 <p class="text-success">Rp. {{ $wisata->harga }}</p>
                                 <h5>Deskripsi:</h5>
                                 <p>{{ $wisata->deskripsi }}</p>
-                                <a href="" class="btn btn-success w-100">Contact Admin</a>
+                                <a href="https://api.whatsapp.com/send?phone=6283857317946&text=Permisi%20saya%20mau%20tanya%20wisata%20{{ $wisata->nama }}" class="btn btn-success w-100">Contact Admin</a>
                             </div>
                         </div>
                     </div>
