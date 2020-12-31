@@ -23,19 +23,6 @@
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col col-4">
-                                        <label for="address">Deskripsi</label>
-                                    </div>
-                                    <div class="col col-2">
-                                        <label for="">:</label>
-                                    </div>
-                                    <div class="col">
-                                        {{$beritum->deskripsi}}
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="row">
-                                    <div class="col col-4">
                                         <label for="address">Tanggal upload</label>
                                     </div>
                                     <div class="col col-2">
@@ -58,6 +45,11 @@
                         <hr>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {!! $beritum->deskripsi !!}
             </div>
         </div>
     </div>

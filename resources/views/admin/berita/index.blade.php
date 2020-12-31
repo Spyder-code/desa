@@ -56,7 +56,7 @@
                                     @foreach ($data as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->nama }}</td>
+                                        <td>{{ substr($item->nama,0,30) }}</td>
                                         <td>{{ substr($item->deskripsi,0,30 ) }}</td>
                                         <td><img src="{{ $item->image }}" class="img-fluid" style="height: 100px"></td>
                                         <td class="d-flex justify-content-center">

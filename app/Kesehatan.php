@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kesehatan extends Model
 {
-    //
+    protected $fillable = ['sehat','sakit','hamil'];
 }

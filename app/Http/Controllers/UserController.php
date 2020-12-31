@@ -6,6 +6,7 @@ use App\Apb;
 use App\Berita;
 use App\Bum;
 use App\Hukum;
+use App\Kesehatan;
 use App\Kunjung;
 use App\Penduduk;
 use App\Pertanian;
@@ -22,6 +23,12 @@ class UserController extends Controller
         $wisata = Wisata::all()->take(5);
         $produk = Produk::all()->take(5);
         return view('user.index',compact('wisata','produk'));
+    }
+
+    public function kesehatan()
+    {
+        $data = Kesehatan::find(1);
+        return view('user.kesehatan', compact('data'));
     }
 
     public function berita()

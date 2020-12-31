@@ -7,7 +7,7 @@
             <h2>Daftar Produk</h2>
             <div class="row">
                 @foreach ($data as $item)
-                <div class="col-6 col-md-4">
+                <div class="col-6 col-md-4 mt-2">
                     <div class="card shadow">
                         <div class="card-body">
                             <img src="{{ $item->image }}" class="card-img-top img-fluid">

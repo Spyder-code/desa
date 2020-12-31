@@ -25,6 +25,7 @@ Route::get('/pertanian', 'UserController@pertanian')->name('user.pertanian');
 Route::get('/apb', 'UserController@apb')->name('user.apb');
 Route::get('/rkp', 'UserController@rkp')->name('user.rkp');
 Route::get('/rpjm', 'UserController@rpjm')->name('user.rpjm');
+Route::get('/kesehatan', 'UserController@kesehatan')->name('user.kesehatan');
 Route::get('/penduduk', 'UserController@penduduk')->name('user.penduduk');
 Route::get('/wisata', 'UserController@wisata')->name('user.wisata');
 Route::get('/produk', 'UserController@produk')->name('user.produk');

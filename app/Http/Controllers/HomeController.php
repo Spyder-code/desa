@@ -2,7 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Berita;
+use App\Bum;
+use App\Hukum;
+use App\Kunjung;
+use App\Pertanian;
+use App\Produk;
+use App\Rkp;
+use App\Rpjm;
 use App\User;
+use App\Wisata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -25,7 +34,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $produk = Produk::all()->count();
+        $hukum = Hukum::all()->count();
+        $pertanian = Pertanian::all()->count();
+        $berita = Berita::all()->count();
+        $wisata = Wisata::all()->count();
+        $kunjung = Kunjung::all()->count();
+        $bum = Bum::all()->count();
+        $rpjm = Rpjm::all()->count();
+        $rkp = Rkp::all()->count();
+        return view('admin.dashboard',compact('produk','hukum','pertanian','berita','wisata','kunjung','bum','rpjm','rkp'));
     }
 
     public function profile()

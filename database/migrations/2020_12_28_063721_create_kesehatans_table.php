@@ -15,10 +15,9 @@ class CreateKesehatansTable extends Migration
     {
         Schema::create('kesehatans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('harga');
-            $table->string('deskripsi');
-            $table->string('image');
+            $table->integer('sehat');
+            $table->integer('sakit');
+            $table->integer('hamil');
             $table->timestamps();
         });
     }

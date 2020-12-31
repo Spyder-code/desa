@@ -15,7 +15,9 @@ class KesehatanController extends Controller
      */
     public function index()
     {
-        //
+        $data = Kesehatan::all();
+        $kesehatan = Kesehatan::find(1);
+        return view('admin.kesehatan.index',compact('data','kesehatan'));
     }
 
     /**
@@ -70,7 +72,19 @@ class KesehatanController extends Controller
      */
     public function update(Request $request, Kesehatan $kesehatan)
     {
-        //
+        $request->validate([
+            'sehat' => 'required',
+            'sakit' => 'required',
+            'hamil' => 'required',
+        ]);
+
+        $kesehatan->update([
+            'sehat' => $request->sehat,
+            'sakit' => $request->sakit,
+            'hamil' => $request->hamil,
+        ]);
+
+        return back()->with('success','Data berhasil diupdate!');
     }
 
     /**

@@ -15,17 +15,18 @@
 <meta property="og:url" content="https://desasukolilo.com/">
 <meta property="og:title" content="Desa Sukolilo | Kecamatan Wajak Kabupaten Malang">
 <meta property="og:description" content="Tujuan utama dibuatnya Desa Wisata Sukolilo adalah sebagai sarana edukatif bagi masyarakat, di Desa Wisata Sukolilo kita bisa melakukan berbagai kegiatan seru yang berbau alam seperti memetik sayur, pengolahan susu, wahana outbond, air terjun dan wisata alam lainnya">
-<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+<meta property="og:image" content="{{ asset('images/kabmalang.png') }}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://desasukolilo.com/">
 <meta property="twitter:title" content="Desa Sukolilo | Kecamatan Wajak Kabupaten Malang">
 <meta property="twitter:description" content="Tujuan utama dibuatnya Desa Wisata Sukolilo adalah sebagai sarana edukatif bagi masyarakat, di Desa Wisata Sukolilo kita bisa melakukan berbagai kegiatan seru yang berbau alam seperti memetik sayur, pengolahan susu, wahana outbond, air terjun dan wisata alam lainnya">
-<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+<meta property="twitter:image" content="{{ asset('images/kabmalang.png') }}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="{{ asset('user/css/responsive.css')}}">
+  <link rel="icon" href="{{ asset('images/kabmalang.png') }}" type="image/gif" sizes="16x16">
   <!-- Bootstrap core CSS -->
   <link href="{{ asset('user/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Material Design Bootstrap -->
@@ -46,7 +47,7 @@
       <div class="row">
         <div class="col-auto mr-auto mt-3 d-flex">
           <h6><i class="fas fa-phone-alt"></i> +6283857318946</h6>
-          <h6 class="ml-5"><i class="fas fa-envelope"></i> spydercode@gmail.com</h6>
+          <h6 class="ml-5"><i class="fas fa-envelope"></i> admin@desasukolilo.com</h6>
         </div>
       </div>
     </div>
@@ -85,7 +86,7 @@
       </a>
     </div>
     <div class="col-auto mt-3 d-flex">
-      <h6 class="ml-2 border-dark">29 22 2020</h6>
+      <h6 class="ml-2 border-dark">{{ date('d F Y') }}</h6>
     </div>
   </div>
   <div class="divider"></div>

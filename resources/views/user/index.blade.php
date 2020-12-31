@@ -91,11 +91,20 @@
         </div>
       </a>
     </div>
-    <div class="col-12 col-md-4 mt-3">
+    <div class="col-6 col-md-4 mt-3">
       <a href="{{ url('bum') }}">
         <div class="card shadow text-center" data-aos="fade-up" data-aos-delay="1000">
           <div class="card-body">
             <h3 class="cat-text"> <i class="fas fa-building"></i><br> BUM Desa</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-6 col-md-4 mt-3">
+      <a href="{{ url('kesehatan') }}">
+        <div class="card shadow text-center" data-aos="fade-up" data-aos-delay="1200">
+          <div class="card-body">
+            <h3 class="cat-text"> <i class="fas fa-heart"></i><br> Kesehatan</h3>
           </div>
         </div>
       </a>

@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo.jpg') }}">
-    <title>Dashboard</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/kabmalang.png') }}">
+    <title>Dashboard | Admin Desa Sukolilo</title>
     <link href="{{ asset('admin/assets/extra-libs/c3/c3.min.css')}}" rel="stylesheet">
     <link href="{{ asset('admin/assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
     <link href="{{ asset('admin/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet" />
@@ -210,11 +210,11 @@
                                 class="hide-menu">BUM Desa
                             </span></a>
                     </li>
-                    {{-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('kesehatan.index') }}"
-                            aria-expanded="false"><i data-feather="user-check" class="feather-icon"></i><span
+                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('kesehatan.index') }}"
+                            aria-expanded="false"><i data-feather="heart" class="feather-icon"></i><span
                                 class="hide-menu">Kesehatan
                             </span></a>
-                    </li> --}}
+                    </li>
                     <li class="list-divider"></li>
                     <li class="nav-small-cap"><span class="hide-menu">Pembangunan</span></li>
                     <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{{ route('rpjm.index') }}"
