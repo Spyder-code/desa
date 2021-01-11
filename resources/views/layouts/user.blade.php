@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 
 <body style="background-color: lavender;">
@@ -56,15 +56,18 @@
   <div class="header-main sticky-top">
     <div class="container flex-center flex-column">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-8">
           <div class="logo"><a href="{{ url('/') }}">Desa Sukolilo Kecamatan Wajak</a></div>
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <div class="d-flex text-center head">
             <a href="{{ url('/') }}"><i class="fas fa-home"></i>
               <div class="navv" style="font-size: 10pt; font-weight:bold">Beranda</div>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=6283857317946&text=Permisi%20saya%20mau%20tanya" class="ml-5"><i class="fas fa-phone"></i><br>
+            <a href="https://instagram.com/sukolilo.wajak_malang?igshid=1ph91pyp8chtg" class="ml-5"><i class="fas fa-camera-retro"></i>
+              <div class="navv" style="font-size: 10pt; font-weight:bold">Instagram</div>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=6285234317297&text=Permisi%20saya%20mau%20tanya" class="ml-5"><i class="fas fa-phone"></i><br>
               <div class="navv" style="font-size: 10pt; font-weight:bold">Hubungi</div>
             </a>
             <a href="{{ url('/login') }}" class="ml-5"><i class="fas fa-user"></i><br>
@@ -108,8 +111,11 @@
             <a class="nav-link ml-2 mob-bot-footer text-white item" href="{{ url('/') }}">
               <i class="fas fa-home"></i><br> Home
             </a>
-            <a class="nav-link ml-2 mob-bot-footer text-white item" href="https://api.whatsapp.com/send?phone=6283857317946&text=Permisi%20saya%20mau%20tanya">
+            <a class="nav-link ml-2 mob-bot-footer text-white item" href="https://api.whatsapp.com/send?phone=6285234317297&text=Permisi%20saya%20mau%20tanya">
               <i class="fas fa-phone"></i><br> Hubungi
+            </a>
+            <a class="nav-link ml-2 mob-bot-footer text-white item" href="https://instagram.com/sukolilo.wajak_malang?igshid=1ph91pyp8chtg">
+              <i class="fas fa-camera-retro"></i><br> Instagram
             </a>
             <a class="nav-link ml-2 mob-bot-footer text-white item" href="{{ url('login') }}">
               <i class="fas fa-user"></i><br> Login

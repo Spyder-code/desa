@@ -20,7 +20,7 @@
                                 <p class="text-success">Rp. {{ $wisata->harga }}</p>
                                 <h5>Deskripsi:</h5>
                                 <p>{{ $wisata->deskripsi }}</p>
-                                <a href="https://api.whatsapp.com/send?phone=6283857317946&text=Permisi%20saya%20mau%20tanya%20wisata%20{{ $wisata->nama }}" class="btn btn-success w-100">Contact Admin</a>
+                                <a href="https://api.whatsapp.com/send?phone=6285234317297&text=Permisi%20saya%20mau%20tanya%20wisata%20{{ $wisata->nama }}" class="btn btn-success w-100">Contact Admin</a>
                             </div>
                         </div>
                     </div>
